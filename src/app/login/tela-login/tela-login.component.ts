@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-login',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaLoginComponent implements OnInit {
 
-  constructor() { }
+  user = '';
+  password = '';
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  entrar(){
+    localStorage.setItem("USER", this.user);
+    localStorage.setItem("password", this.password)
+    this.router.navigate(['/main'])
+  }
+
+  logout(){
+    localStorage.removeItem('user');
   }
 
 }

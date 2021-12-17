@@ -1,30 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { MainModule } from './main/main.module';
-import { MainPageComponent } from './main/main-page/main-page.component';
+import { LoginModule } from '../app/login/login.module';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
   ],
   imports: [
-    RouterModule.forRoot([
-      {
-        path: '', 
-        component: MainPageComponent,
-        canActivate: []
-      }
-    ]),
     BrowserModule,
-    MainModule,
-    MainPageComponent,
+    LoginModule,
     RouterModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -8,20 +7,9 @@ import { Router } from '@angular/router';
 })
 export class MainPageComponent implements OnInit {
 
-  user='';
-  constructor(
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  logar(){
-    localStorage.setItem("USER", this.user)
-  }
-
-  logout(){
-
   }
 
 }
