@@ -1,9 +1,19 @@
-<div class="tela-login">
+<div class="container">
+    <div class="tela-login">
+        <div class="login-input">
+            <input placeholder="Usuário" type='text' [(ngModel)]='user'>
+        </div>
 
-    <input placeholder="Usuário" type='text' [(ngModel)]='user'>
-    <input placeholder="Senha" type='password' [(ngModel)]='password'>
+        <div class="login-input">
+            <input placeholder="Senha" type='password' [(ngModel)]='password'>
+        </div>
 
-    <button (click)='entrar()'>Entrar</button>
-    <button (click)='logout()'>Logout</button>
+        <div class="login-button">
+            <button (click)='entrar()'>Entrar</button>
+        </div>
 
+        <div class="login-button">
+            <button (click)='logout()'>Logout</button>
+        </div>
+    </div>
 </div>

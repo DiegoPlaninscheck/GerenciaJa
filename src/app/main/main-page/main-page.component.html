@@ -1,8 +1,19 @@
-<div style="display: flex; justify-content: center;">
+<div class="container">
+  <div class="main-buttons">
+  <div class="main-button">
+    <button (click)='cliente()'>Cliente</button>
+  </div>
 
-  <button style="margin-right: 10px;" (click)='cliente()'>Cliente</button>
-  <button style="margin-right: 10px;" (click)='pedidos()'>Pedidos</button>
-  <button style="margin-right: 10px;" (click)='produtos()'>Produtos</button>
-  <button (click)='voltar()'>Voltar</button>
+  <div class="main-button">
+    <button (click)='pedidos()'>Pedidos</button>
+  </div>
 
+  <div class="main-button">
+    <button (click)='produtos()'>Produtos</button>
+  </div>
+  </div>
+
+  <div class="main-button-voltar">
+    <button (click)='voltar()'>Voltar</button>
+  </div>
 </div>
