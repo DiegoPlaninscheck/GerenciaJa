@@ -32,4 +32,8 @@ export class MainPageComponent implements OnInit {
 
   }
 
+  voltar(){
+    this.router.navigate([''])  
+  }
+
 }
