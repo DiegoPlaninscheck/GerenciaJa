@@ -12,4 +12,16 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  cliente() {
+
+  }
+
+  pedidos() {
+
+  }
+
+  produtos(){
+
+  }
+
 }
