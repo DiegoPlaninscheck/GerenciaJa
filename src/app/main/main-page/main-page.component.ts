@@ -21,15 +21,15 @@ export class MainPageComponent implements OnInit {
   }
 
   cliente() {
-
+    this.router.navigate(['../cliente/'])
   }
 
   pedidos() {
-
+    this.router.navigate(['../pedidos/'])
   }
 
   produtos(){
-
+    this.router.navigate(['../produtos/'])
   }
 
   voltar(){

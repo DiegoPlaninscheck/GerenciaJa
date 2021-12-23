@@ -11,5 +11,6 @@ export class GerenciarClienteComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }
