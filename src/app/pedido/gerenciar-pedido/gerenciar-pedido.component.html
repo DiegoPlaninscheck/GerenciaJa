@@ -1,3 +1,14 @@
-<p>
-  gerenciar-pedido works!
-</p>
+<div *ngFor = 'let pedido of listaPedidos'>
+    <div class="id">
+    Id: {{pedido.id}}
+    </div>
+    <div class="mexer-id">
+        <button>Ver pedido</button>
+        <button>Editar pedido</button>
+    </div>
+</div>
+
+<div class="cadastrar">
+    <input type="text" placeholder="Pedido" class="cadastro">
+    <button>Cadastrar</button>
+</div>

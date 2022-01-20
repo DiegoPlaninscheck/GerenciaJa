@@ -1,3 +1,15 @@
-<p>
-  gerenciar-produtos works!
-</p>
+<div *ngFor = 'let produto of listaProdutos' >
+  <div class="produtos">
+    Id: {{produto.id}} Nome: {{produto.nome}} Valor: {{produto.valor}}
+  </div>
+  <div class="mexer-produto">
+    <button>Ver produto</button>
+    <button>Editar produto</button>
+  </div>
+</div>
+
+<div class="cadastrar">
+  <input type="text" placeholder="Nome" class="cadastro">
+  <input type="text" placeholder="Valor" class="cadastro">
+  <button>Cadastrar</button>
+</div>

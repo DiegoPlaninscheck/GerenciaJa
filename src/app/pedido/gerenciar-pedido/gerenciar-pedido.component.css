@@ -1,0 +1,24 @@
+.id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mexer-id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cadastrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro{
+    width: 10%;
+    height: 25px;
+    border-radius: 15px;
+}

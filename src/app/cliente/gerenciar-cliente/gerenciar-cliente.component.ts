@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GerenciarClienteComponent implements OnInit {
 
+
+
+  listaClientes = [
+    {name: 'Diego', sobrenome: 'Planinscheck'},
+    {name: 'Joao', sobrenome: 'Meireles'},
+    {name: 'Camilly', sobrenome: 'Pessoti'}
+  ];
+  
+
   constructor() { }
 
   ngOnInit() {

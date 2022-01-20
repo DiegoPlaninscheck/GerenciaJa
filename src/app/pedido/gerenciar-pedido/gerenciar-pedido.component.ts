@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GerenciarPedidoComponent implements OnInit {
 
+  listaPedidos = [
+    {id: 1},
+    {id: 2},
+    {id: 3}
+  ]
+
   constructor() { }
 
   ngOnInit() {

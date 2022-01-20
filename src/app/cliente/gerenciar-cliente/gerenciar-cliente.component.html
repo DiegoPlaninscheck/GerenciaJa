@@ -1,3 +1,15 @@
-<p>
-  gerenciar-cliente works!
-</p>
+<div *ngFor = 'let cliente of listaClientes'>
+    <div class="cliente">
+    Nome: {{cliente.name}} Sobrenome: {{cliente.sobrenome}}
+    </div>
+   <div class="mexer-cliente">
+       <button>Ver Cliente</button>
+       <button>Editar Cliente</button>
+   </div>
+</div>
+
+<div class="cadastrar">
+    <input type="text" class="cadastro" placeholder="Nome">
+    <input type="text" class="cadastro" placeholder="Sobrenome">
+    <button>Cadastrar</button>
+</div>
