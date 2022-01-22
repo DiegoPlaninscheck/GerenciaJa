@@ -1,6 +1,6 @@
 <div *ngFor = 'let cliente of listaClientes'>
     <div class="cliente">
-    Nome: {{cliente.name}} Sobrenome: {{cliente.sobrenome}}
+    Nome: {{cliente.nome}} Sobrenome: {{cliente.sobrenome}}
     </div>
    <div class="mexer-cliente">
        <button>Ver Cliente</button>
@@ -9,7 +9,10 @@
 </div>
 
 <div class="cadastrar">
-    <input type="text" class="cadastro" placeholder="Nome">
-    <input type="text" class="cadastro" placeholder="Sobrenome">
-    <button>Cadastrar</button>
+    <input [(ngModel)]='nome' class="cadastro" placeholder="Nome">
+    <input [(ngModel)]='sobrenome' class="cadastro" placeholder="Sobrenome">
+    <button (click) = 'cadastrarPessoa()' class="cadastro">Cadastrar</button>
 </div>
+
+
+

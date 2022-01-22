@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GerenciarProdutosComponent implements OnInit {
 
+  id = undefined;
+  nome = '';
+  valor = undefined;
+
     listaProdutos = [
       {id: 1, nome: 'Arroz', valor: 5.0},
       {id: 2, nome: 'Feijão', valor: 4.50},
@@ -16,6 +20,19 @@ export class GerenciarProdutosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cadastrarProduto(){
+    let produto = {
+      id: this.id,
+      nome: this.nome,
+      valor: this.valor
+    }
+    this.listaProdutos.push(produto);
+
+    this.id = '';
+    this.nome = '';
+    this.valor = '';
   }
 
 }

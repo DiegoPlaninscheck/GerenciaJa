@@ -9,7 +9,8 @@
 </div>
 
 <div class="cadastrar">
-  <input type="text" placeholder="Nome" class="cadastro">
-  <input type="text" placeholder="Valor" class="cadastro">
-  <button>Cadastrar</button>
+  <input [(ngModel)] = 'id' placeholder="Id" class="cadastro">
+  <input [(ngModel)] = 'nome' placeholder="Nome" class="cadastro">
+  <input [(ngModel)] = 'valor' placeholder="Valor" class="cadastro">
+  <button (click) = 'cadastrarProduto()' class="cadastro">Cadastrar</button>
 </div>

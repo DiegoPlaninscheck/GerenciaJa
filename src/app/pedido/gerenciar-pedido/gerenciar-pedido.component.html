@@ -9,6 +9,6 @@
 </div>
 
 <div class="cadastrar">
-    <input type="text" placeholder="Pedido" class="cadastro">
-    <button>Cadastrar</button>
+    <input [(ngModel)] = 'id' placeholder="Pedido" class="cadastro">
+    <button (click) = 'cadastrarPedido()' class="cadastro">Cadastrar</button>
 </div>

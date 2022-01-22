@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GerenciarPedidoComponent implements OnInit {
 
+  id = undefined;
+
   listaPedidos = [
     {id: 1},
     {id: 2},
@@ -16,6 +18,15 @@ export class GerenciarPedidoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cadastrarPedido(){
+    let pedido = {
+      id: this.id
+    }
+    this.listaPedidos.push(pedido);
+
+    this.id = '';
   }
 
 }

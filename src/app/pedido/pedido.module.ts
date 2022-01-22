@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { GerenciarPedidoComponent } from './gerenciar-pedido/gerenciar-pedido.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MainModule } from '../main/main.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    MainModule
+    MainModule,
+    FormsModule
   ],
   declarations: [GerenciarPedidoComponent]
 })

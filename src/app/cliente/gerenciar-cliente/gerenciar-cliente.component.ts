@@ -7,19 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GerenciarClienteComponent implements OnInit {
 
-
+  nome = '';
+  sobrenome = '';
 
   listaClientes = [
-    {name: 'Diego', sobrenome: 'Planinscheck'},
-    {name: 'Joao', sobrenome: 'Meireles'},
-    {name: 'Camilly', sobrenome: 'Pessoti'}
+    {nome: 'Diego', sobrenome: 'Planinscheck'},
+    {nome: 'Joao', sobrenome: 'Meireles'},
+    {nome: 'Camilly', sobrenome: 'Pessoti'}
   ];
-  
 
   constructor() { }
 
   ngOnInit() {
   }
-  
+
+  cadastrarPessoa(){
+    let pessoa = {
+      nome: this.nome,
+      sobrenome: this.sobrenome
+    };
+    this.listaClientes.push(pessoa);
+
+  this.nome = "";
+  this.sobrenome = "";
+  }
 
 }
