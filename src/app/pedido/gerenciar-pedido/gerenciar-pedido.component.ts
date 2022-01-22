@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gerenciar-pedido',
@@ -15,7 +16,10 @@ export class GerenciarPedidoComponent implements OnInit {
     {id: 3}
   ]
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -27,6 +31,10 @@ export class GerenciarPedidoComponent implements OnInit {
     this.listaPedidos.push(pedido);
 
     this.id = '';
+  }
+
+  voltar(){
+    this.router.navigate(['/main-page'])
   }
 
 }

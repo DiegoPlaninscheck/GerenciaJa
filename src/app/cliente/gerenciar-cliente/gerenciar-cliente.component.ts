@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gerenciar-cliente',
@@ -16,7 +17,10 @@ export class GerenciarClienteComponent implements OnInit {
     {nome: 'Camilly', sobrenome: 'Pessoti'}
   ];
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -30,6 +34,10 @@ export class GerenciarClienteComponent implements OnInit {
 
   this.nome = "";
   this.sobrenome = "";
+  }
+
+  voltar(){
+    this.router.navigate(['/main-page'])
   }
 
 }

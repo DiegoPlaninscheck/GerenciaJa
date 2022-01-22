@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gerenciar-produtos',
@@ -17,7 +18,10 @@ export class GerenciarProdutosComponent implements OnInit {
       {id: 3, nome: 'Macarrão', valor: 6.0}
     ]
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -33,6 +37,10 @@ export class GerenciarProdutosComponent implements OnInit {
     this.id = '';
     this.nome = '';
     this.valor = '';
+  }
+
+  voltar(){
+    this.router.navigate(['/main-page'])
   }
 
 }
