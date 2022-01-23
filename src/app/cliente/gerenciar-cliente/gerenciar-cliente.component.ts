@@ -8,13 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GerenciarClienteComponent implements OnInit {
 
+  id = undefined;
   nome = '';
   sobrenome = '';
 
   listaClientes = [
-    {nome: 'Diego', sobrenome: 'Planinscheck'},
-    {nome: 'João', sobrenome: 'Meireles'},
-    {nome: 'Camilly', sobrenome: 'Pessoti'}
+    {id: 1, nome: 'Diego', sobrenome: 'Planinscheck'},
+    {id: 2, nome: 'João', sobrenome: 'Meireles'},
+    {id: 3, nome: 'Camilly', sobrenome: 'Pessoti'}
   ];
 
   constructor(
@@ -27,13 +28,19 @@ export class GerenciarClienteComponent implements OnInit {
 
   cadastrarPessoa(){
     let pessoa = {
+      id: this.id,
       nome: this.nome,
       sobrenome: this.sobrenome
     };
     this.listaClientes.push(pessoa);
 
+  this.id = "";
   this.nome = "";
   this.sobrenome = "";
+  }
+
+  abrirProduto(cliente){
+    this.router.navigate(['/cliente/ver-cliente/', cliente])
   }
 
   editar(personData, indexPerson){
@@ -46,7 +53,4 @@ export class GerenciarClienteComponent implements OnInit {
   voltar(){
     this.router.navigate(['/main-page'])
   }
-
-  
-
 }

@@ -4,10 +4,17 @@ import { GerenciarClienteComponent } from './gerenciar-cliente/gerenciar-cliente
 import { MainModule } from '../main/main.module';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { VerClienteComponent } from './ver-cliente/ver-cliente.component';
 
 
 const routes: Routes = [
-  {path: 'cliente', component: GerenciarClienteComponent}
+  {path: 'cliente', component: GerenciarClienteComponent},
+  {
+    path: 'cliente',
+    children: [
+      {path: ':id', component: VerClienteComponent}
+    ]
+  }
 ];
 
 @NgModule({
@@ -17,6 +24,6 @@ const routes: Routes = [
     MainModule,
     FormsModule
   ],
-  declarations: [GerenciarClienteComponent]
+  declarations: [GerenciarClienteComponent, VerClienteComponent]
 })
 export class ClienteModule { }
