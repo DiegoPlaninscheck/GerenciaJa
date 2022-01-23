@@ -1,22 +1,24 @@
-<div *ngFor = 'let cliente of listaClientes'>
-    <div class="cliente">
-    Nome: {{cliente.nome}} Sobrenome: {{cliente.sobrenome}}
+<div *ngFor = 'let cliente of listaClientes; let i = index'>
+        <div class="cliente">
+        {{cliente.nome}} {{cliente.sobrenome}}
+        </div>
+       <div class="mexer-cliente">
+           <button>Ver Cliente</button>
+           <button (click) = 'editar(cliente, i)'>Editar Cliente</button>
+       </div>
     </div>
-   <div class="mexer-cliente">
-       <button>Ver Cliente</button>
-       <button>Editar Cliente</button>
-   </div>
-</div>
+    
+    <div class="cadastrar">
+        <input [(ngModel)]='nome' placeholder="Nome">
+        <input [(ngModel)]='sobrenome' placeholder="Sobrenome">
+    </div>
+    
+    <div class="voltar">
+        <button (click) = 'cadastrarPessoa()'>Cadastrar</button>
+    </div>
 
-<div class="cadastrar">
-    <input [(ngModel)]='nome' class="cadastro" placeholder="Nome">
-    <input [(ngModel)]='sobrenome' class="cadastro" placeholder="Sobrenome">
-    <button (click) = 'cadastrarPessoa()' class="cadastro">Cadastrar</button>
-</div>
-
-<div class="voltar">
-    <button class="volta" (click)= 'voltar()'>Voltar Página principal</button>
-</div>
-
+    <div class="voltar">
+        <button (click)= 'voltar()'>Voltar Página principal</button>
+    </div>
 
 

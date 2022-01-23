@@ -33,6 +33,12 @@ export class GerenciarPedidoComponent implements OnInit {
     this.id = '';
   }
 
+  editar(pedido, indexPedido){
+    this.id = pedido.id;
+
+    this.listaPedidos.splice(indexPedido, 1);
+  }
+
   voltar(){
     this.router.navigate(['/main-page'])
   }

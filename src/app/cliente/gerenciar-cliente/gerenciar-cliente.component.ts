@@ -13,7 +13,7 @@ export class GerenciarClienteComponent implements OnInit {
 
   listaClientes = [
     {nome: 'Diego', sobrenome: 'Planinscheck'},
-    {nome: 'Joao', sobrenome: 'Meireles'},
+    {nome: 'João', sobrenome: 'Meireles'},
     {nome: 'Camilly', sobrenome: 'Pessoti'}
   ];
 
@@ -36,8 +36,17 @@ export class GerenciarClienteComponent implements OnInit {
   this.sobrenome = "";
   }
 
+  editar(personData, indexPerson){
+    this.nome = personData.nome;
+    this.sobrenome = personData.sobrenome;
+
+    this.listaClientes.splice(indexPerson, 1);
+  }
+
   voltar(){
     this.router.navigate(['/main-page'])
   }
+
+  
 
 }

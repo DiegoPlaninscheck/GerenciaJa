@@ -13,9 +13,9 @@ export class GerenciarProdutosComponent implements OnInit {
   valor = undefined;
 
     listaProdutos = [
-      {id: 1, nome: 'Arroz', valor: 5.0},
+      {id: 1, nome: 'Arroz', valor: 5.00},
       {id: 2, nome: 'Feijão', valor: 4.50},
-      {id: 3, nome: 'Macarrão', valor: 6.0}
+      {id: 3, nome: 'Macarrão', valor: 6.00}
     ]
 
   constructor(
@@ -37,6 +37,14 @@ export class GerenciarProdutosComponent implements OnInit {
     this.id = '';
     this.nome = '';
     this.valor = '';
+  }
+
+  editar(produto, indexproduto){
+    this.id = produto.id;
+    this.nome = produto.nome;
+    this.valor = produto.valor;
+
+    this.listaProdutos.splice(indexproduto, 1);
   }
 
   voltar(){

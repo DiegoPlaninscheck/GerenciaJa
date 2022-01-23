@@ -1,20 +1,23 @@
-<div *ngFor = 'let produto of listaProdutos' >
+<div *ngFor = 'let produto of listaProdutos; let i = index' >
   <div class="produtos">
-    Id: {{produto.id}} Nome: {{produto.nome}} Valor: {{produto.valor}}
+    Id: {{produto.id}} Nome: {{produto.nome}} Valor: R${{produto.valor}}
   </div>
   <div class="mexer-produto">
     <button>Ver produto</button>
-    <button>Editar produto</button>
+    <button (click) = 'editar(produto, i)'>Editar produto</button>
   </div>
 </div>
 
 <div class="cadastrar">
-  <input [(ngModel)] = 'id' placeholder="Id" class="cadastro">
-  <input [(ngModel)] = 'nome' placeholder="Nome" class="cadastro">
-  <input [(ngModel)] = 'valor' placeholder="Valor" class="cadastro">
-  <button (click) = 'cadastrarProduto()' class="cadastro">Cadastrar</button>
+  <input [(ngModel)] = 'id' placeholder="Id">
+  <input [(ngModel)] = 'nome' placeholder="Nome">
+  <input [(ngModel)] = 'valor' placeholder="Valor">
 </div>
 
 <div class="voltar">
-  <button class="volta" (click)= 'voltar()'>Voltar Página principal</button>
+  <button (click) = 'cadastrarProduto()'>Cadastrar</button>
+</div>
+
+<div class="voltar">
+  <button (click)= 'voltar()'>Voltar Página principal</button>
 </div>
