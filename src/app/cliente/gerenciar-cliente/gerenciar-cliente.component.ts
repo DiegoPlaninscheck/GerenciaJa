@@ -44,6 +44,7 @@ export class GerenciarClienteComponent implements OnInit {
   }
 
   editar(personData, indexPerson){
+    this.id = personData.id;
     this.nome = personData.nome;
     this.sobrenome = personData.sobrenome;
 
