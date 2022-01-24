@@ -9,12 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class VerPedidoComponent implements OnInit {
 
   id;
+  situacao;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router
   ) { 
     this.id = route.snapshot.paramMap.get('id');
+    this.situacao = route.snapshot.paramMap.get('situacao')
   }
 
   ngOnInit() {

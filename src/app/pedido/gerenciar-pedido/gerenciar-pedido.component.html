@@ -1,15 +1,16 @@
 <div *ngFor = 'let pedido of listaPedidos; let i = index'>
     <div class="id">
-    Id: {{pedido.id}}
-    </div>
-    <div class="mexer-id">
-        <button (click) = 'abrirProduto(pedido)'>Ver pedido</button>
-        <button (click) = 'editar(pedido, i)'>Editar pedido</button>
-    </div>
+        <div class="mexer-id">
+            Id: {{pedido.id}} Situação: {{pedido.situacao}}
+            <button (click) = 'abrirProduto(pedido)'>Ver pedido</button>
+            <button (click) = 'editar(pedido, i)'>Editar pedido</button>
+        </div>
+    </div> 
 </div>
 
 <div class="cadastrar">
     <input [(ngModel)] = 'id' placeholder="Pedido" class="cadastro">
+    <input [(ngModel)] = 'situacao' placeholder="Situação" class="cadastro">
 </div>
 
 <div class="voltar">  

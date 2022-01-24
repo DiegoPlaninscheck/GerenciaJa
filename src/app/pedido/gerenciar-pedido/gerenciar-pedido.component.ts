@@ -9,11 +9,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class GerenciarPedidoComponent implements OnInit {
 
   id = undefined;
+  situacao = '';
 
   listaPedidos = [
-    {id: 1},
-    {id: 2},
-    {id: 3}
+    {id: 1, situacao: 'Finalizado'},
+    {id: 2, situacao: 'Em andamento'},
+    {id: 3, situacao: 'Em andamento'}
   ]
 
   constructor(
@@ -26,11 +27,13 @@ export class GerenciarPedidoComponent implements OnInit {
 
   cadastrarPedido(){
     let pedido = {
-      id: this.id
+      id: this.id,
+      situacao: this.situacao
     }
     this.listaPedidos.push(pedido);
 
     this.id = '';
+    this.situacao = '';
   }
 
   abrirProduto(pedido){
@@ -39,6 +42,7 @@ export class GerenciarPedidoComponent implements OnInit {
 
   editar(pedido, indexPedido){
     this.id = pedido.id;
+    this.situacao = pedido.situacao;
 
     this.listaPedidos.splice(indexPedido, 1);
   }

@@ -1,11 +1,11 @@
 <div *ngFor = 'let cliente of listaClientes; let i = index'>
         <div class="cliente">
-        {{cliente.id}} {{cliente.nome}} {{cliente.sobrenome}}
+            <div class="mexer-cliente">
+                {{cliente.id}} {{cliente.nome}} {{cliente.sobrenome}}
+                   <button (click) = 'abrirProduto(cliente)'>Ver Cliente</button>
+                   <button (click) = 'editar(cliente, i)'>Editar Cliente</button>
+               </div>
         </div>
-       <div class="mexer-cliente">
-           <button (click) = 'abrirProduto(cliente)'>Ver Cliente</button>
-           <button (click) = 'editar(cliente, i)'>Editar Cliente</button>
-       </div>
     </div>
     
     <div class="cadastrar">

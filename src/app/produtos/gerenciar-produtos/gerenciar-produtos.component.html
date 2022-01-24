@@ -1,10 +1,10 @@
 <div *ngFor = 'let produto of listaProdutos; let i = index' >
   <div class="produtos">
-    Id: {{produto.id}} Nome: {{produto.nome}} Valor: R${{produto.valor}}
-  </div>
-  <div class="mexer-produto">
-    <button (click) = 'abrirProduto(produto)'>Ver produto</button>
-    <button (click) = 'editar(produto, i)'>Editar produto</button>
+    <div class="mexer-produto">
+      Id: {{produto.id}} Nome: {{produto.nome}} Valor: R${{produto.valor}}
+      <button (click) = 'abrirProduto(produto)'>Ver produto</button>
+      <button (click) = 'editar(produto, i)'>Editar produto</button>
+    </div>
   </div>
 </div>
 
