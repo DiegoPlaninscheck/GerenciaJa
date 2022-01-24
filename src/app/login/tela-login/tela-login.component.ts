@@ -13,6 +13,12 @@ export class TelaLoginComponent implements OnInit {
   user = '';
   password = '';
 
+  listUsers = [
+    {user: 'Diego', password: '123'},
+    {user: 'João', password: '123'},
+    {user: 'Camilly', password: '123'}
+  ];
+
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -22,13 +28,18 @@ export class TelaLoginComponent implements OnInit {
   }
 
   entrar(){
-    localStorage.setItem("USER", this.user);
-    localStorage.setItem("password", this.password)
-    this.router.navigate(['../main-page/'])
+    if((this.user == 'Diego' && this.password == '123') || (this.user == 'João' && this.password == '123') || (this.user == 'Camilly' && this.password == '123')){
+      localStorage.setItem("USER", this.user);
+      localStorage.setItem("password", this.password)
+      this.router.navigate(['../main-page/'])
+    }else{
+      this.router.navigate([''])
+    }
   }
-
+  
   logout(){
-    localStorage.removeItem('user');
+    localStorage.removeItem('USER');
+    localStorage.removeItem('password')
   }
 
 }

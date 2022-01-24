@@ -36,4 +36,10 @@ export class MainPageComponent implements OnInit {
     this.router.navigate([''])  
   }
 
+  logout(){
+    localStorage.removeItem('USER');
+    localStorage.removeItem('password')
+    this.router.navigate([''])
+  }
+
 }
