@@ -4,9 +4,17 @@ import { GerenciarProdutosComponent } from './gerenciar-produtos/gerenciar-produ
 import { Routes, RouterModule } from '@angular/router';
 import { MainModule } from '../main/main.module';
 import { FormsModule } from '@angular/forms';
+import { VerProdutoComponent } from './ver-produto/ver-produto.component';
 
 const routes: Routes = [
-  {path: 'produtos', component: GerenciarProdutosComponent}
+  {path: 'produtos', component: GerenciarProdutosComponent},
+
+  {
+    path: 'produtos',
+    children: [
+      {path: ':id', component: VerProdutoComponent}
+    ]
+  }
 ];
 
 @NgModule({
@@ -16,6 +24,6 @@ const routes: Routes = [
     MainModule,
     FormsModule
   ],
-  declarations: [GerenciarProdutosComponent]
+  declarations: [GerenciarProdutosComponent, VerProdutoComponent]
 })
 export class ProdutosModule { }

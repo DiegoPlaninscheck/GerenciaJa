@@ -4,11 +4,19 @@ import { GerenciarPedidoComponent } from './gerenciar-pedido/gerenciar-pedido.co
 import { Routes, RouterModule } from '@angular/router';
 import { MainModule } from '../main/main.module';
 import { FormsModule } from '@angular/forms';
+import { VerPedidoComponent } from './ver-pedido/ver-pedido.component';
 
 
 
 const routes: Routes = [
-  {path: 'pedidos', component: GerenciarPedidoComponent}
+  {path: 'pedidos', component: GerenciarPedidoComponent},
+
+  {
+    path: 'pedidos',
+    children: [
+      {path: ':id', component: VerPedidoComponent}
+    ]
+  }
 ];
 
 @NgModule({
@@ -18,6 +26,6 @@ const routes: Routes = [
     MainModule,
     FormsModule
   ],
-  declarations: [GerenciarPedidoComponent]
+  declarations: [GerenciarPedidoComponent, VerPedidoComponent]
 })
 export class PedidoModule { }

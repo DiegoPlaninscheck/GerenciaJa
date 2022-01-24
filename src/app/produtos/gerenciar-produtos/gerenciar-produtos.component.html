@@ -3,7 +3,7 @@
     Id: {{produto.id}} Nome: {{produto.nome}} Valor: R${{produto.valor}}
   </div>
   <div class="mexer-produto">
-    <button>Ver produto</button>
+    <button (click) = 'abrirProduto(produto)'>Ver produto</button>
     <button (click) = 'editar(produto, i)'>Editar produto</button>
   </div>
 </div>

@@ -33,6 +33,10 @@ export class GerenciarPedidoComponent implements OnInit {
     this.id = '';
   }
 
+  abrirProduto(pedido){
+    this.router.navigate(['/pedidos/ver-pedido/', pedido])
+  }
+
   editar(pedido, indexPedido){
     this.id = pedido.id;
 

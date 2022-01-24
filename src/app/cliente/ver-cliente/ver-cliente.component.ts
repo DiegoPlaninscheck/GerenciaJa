@@ -16,9 +16,11 @@ export class VerClienteComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) { }
-
-  /* this.id = route.snapshot.paramMap.get('id'); */
+  ) { 
+    this.id = route.snapshot.paramMap.get('id');
+    this.nome = route.snapshot.paramMap.get('nome')
+    this.sobrenome = route.snapshot.paramMap.get('sobrenome')
+  }
 
   ngOnInit() {
   }

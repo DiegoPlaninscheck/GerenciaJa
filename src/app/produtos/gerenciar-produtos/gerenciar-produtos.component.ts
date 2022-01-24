@@ -39,6 +39,10 @@ export class GerenciarProdutosComponent implements OnInit {
     this.valor = '';
   }
 
+  abrirProduto(produto){
+    this.router.navigate(['produtos/ver-produto', produto])
+  }
+
   editar(produto, indexproduto){
     this.id = produto.id;
     this.nome = produto.nome;
