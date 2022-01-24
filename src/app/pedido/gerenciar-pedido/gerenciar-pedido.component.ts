@@ -47,6 +47,10 @@ export class GerenciarPedidoComponent implements OnInit {
     this.listaPedidos.splice(indexPedido, 1);
   }
 
+  deletar(indexPedido){
+    this.listaPedidos[indexPedido].deleted = true;
+  }
+
   voltar(){
     this.router.navigate(['/main-page'])
   }

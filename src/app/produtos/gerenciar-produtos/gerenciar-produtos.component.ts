@@ -51,6 +51,10 @@ export class GerenciarProdutosComponent implements OnInit {
     this.listaProdutos.splice(indexproduto, 1);
   }
 
+  deletar(indexproduto){
+    this.listaProdutos[indexproduto].deleted = true;
+  }
+
   voltar(){
     this.router.navigate(['/main-page'])
   }

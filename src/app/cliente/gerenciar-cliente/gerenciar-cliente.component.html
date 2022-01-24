@@ -1,9 +1,10 @@
 <div *ngFor = 'let cliente of listaClientes; let i = index'>
         <div class="cliente">
-            <div class="mexer-cliente">
+            <div *ngIf = 'cliente.deleted != true' class="mexer-cliente">
                 {{cliente.id}} {{cliente.nome}} {{cliente.sobrenome}}
                    <button (click) = 'abrirProduto(cliente)'>Ver Cliente</button>
                    <button (click) = 'editar(cliente, i)'>Editar Cliente</button>
+                   <button (click) = 'deletar(i)'>Deletar Pessoa</button>
                </div>
         </div>
     </div>
