@@ -21,6 +21,7 @@ export class VerClienteComponent implements OnInit {
     this.nome = route.snapshot.paramMap.get('nome')
     this.sobrenome = route.snapshot.paramMap.get('sobrenome')
   }
+  
 
   ngOnInit() {
   }

@@ -51,9 +51,9 @@ export class GerenciarClienteComponent implements OnInit {
     this.listaClientes.splice(indexPerson, 1);
   }
 
-  deletar(indexPerson){
+  /* deletar(indexPerson){
     this.listaClientes[indexPerson].deleted = true;
-  }
+  } */
 
   voltar(){
     this.router.navigate(['/main-page'])
