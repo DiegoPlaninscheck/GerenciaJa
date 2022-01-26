@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-gerenciar-cliente',

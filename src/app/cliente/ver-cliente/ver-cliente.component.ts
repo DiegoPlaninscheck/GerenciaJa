@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-ver-cliente',
@@ -21,7 +22,6 @@ export class VerClienteComponent implements OnInit {
     this.nome = route.snapshot.paramMap.get('nome')
     this.sobrenome = route.snapshot.paramMap.get('sobrenome')
   }
-  
 
   ngOnInit() {
   }
