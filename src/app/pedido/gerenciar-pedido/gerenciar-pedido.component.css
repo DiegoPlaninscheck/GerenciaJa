@@ -20,12 +20,14 @@
     padding: 10px;
     outline: none;
     border: 1px solid;
+    border-radius: 15px;
     background-color: #fffff0;
 }
 
 .mexer-id button{
     padding: 5px;
-    border: none;
+    border: solid;
+    border-radius: 15px;
     color: white;
     background-color: #4B0082;
 }

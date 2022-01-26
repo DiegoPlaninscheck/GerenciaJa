@@ -22,11 +22,13 @@
     outline: none;
     border: 1px solid;
     background-color: #fffff0;
+    border-radius: 15px;
 }
 
 .mexer-cliente button{
     padding: 5px;
-    border: none;
+    border: solid;
+    border-radius: 15px;
     color: white;
     background-color: #4B0082;
 }
